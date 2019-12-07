@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/restoran/create', 'RestoranController@create');
+Route::get('/restoran', 'RestoranController@index');
+Route::post('/restoran', 'RestoranController@store');
+
