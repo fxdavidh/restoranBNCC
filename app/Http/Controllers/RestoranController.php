@@ -60,7 +60,7 @@ class RestoranController extends Controller
      */
     public function edit(restoran $restoran)
     {
-        //
+        return view('edit', compact('restoran'));
     }
 
     /**
@@ -72,7 +72,8 @@ class RestoranController extends Controller
      */
     public function update(Request $request, restoran $restoran)
     {
-        //
+        $restoran->update($request->all());
+        return redirect('restoran');
     }
 
     /**
@@ -83,6 +84,7 @@ class RestoranController extends Controller
      */
     public function destroy(restoran $restoran)
     {
-        //
+        $restoran->delete();
+        return redirect('restoran');
     }
 }
