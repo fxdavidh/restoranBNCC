@@ -14,4 +14,6 @@
 Route::get('/restoran/create', 'RestoranController@create');
 Route::get('/restoran', 'RestoranController@index');
 Route::post('/restoran', 'RestoranController@store');
-
+Route::delete('/restoran/{restoran}', 'RestoranController@destroy');
+Route::get('/restoran/{restoran}/edit', 'RestoranController@edit');
+Route::put('/restoran/{restoran}', 'RestoranController@update');
